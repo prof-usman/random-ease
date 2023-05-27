@@ -1,0 +1,28 @@
+{
+  "name": "random-ease",
+  "version": "1.0.0",
+  "description": "RandomEase is an npm package that simplifies random data generation with ease. It provides a user-friendly interface for generating random numbers, strings, arrays, and more. Whether you need to generate random data for testing, prototyping, or any other purpose, RandomEase makes the process effortless and intuitive.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prof-usman/random-ease.git"
+  },
+  "keywords": [
+    "random",
+    "data",
+    "generation",
+    "utility"
+  ],
+  "author": "Usman Iqbal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prof-usman/random-ease/issues"
+  },
+  "homepage": "https://github.com/prof-usman/random-ease#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
