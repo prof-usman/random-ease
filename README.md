@@ -3,9 +3,10 @@
 [![npm](https://img.shields.io/npm/v/random-ease.svg)](https://www.npmjs.com/package/random-ease)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/prof-usman/random-ease/blob/main/LICENSE)
 [![Known Vulnerabilities](https://snyk.io/test/npm/random-ease/badge.svg)](https://snyk.io/test/npm/random-ease)
-[![Downloads](https://badgen.net/npm/dt/random-ease)](https://www.npmjs.com/package/random-ease)
 
-A powerful and easy-to-use npm package for generating random data. It provides a wide range of helper functions to generate random numbers, strings, dates, and more.
+<!-- [![Downloads](https://badgen.net/npm/dt/random-ease)](https://www.npmjs.com/package/random-ease) -->
+
+> A powerful and versatile library for generating random data and values. It provides a wide range of functions to generate random numbers, strings, arrays, booleans, dates, colors, names, addresses, and more. The package is designed to simplify the generation of random data for testing, prototyping, and data simulation purposes.
 
 ## Installation
 

@@ -1,7 +1,7 @@
 {
   "name": "random-ease",
-  "version": "1.0.6",
-  "description": "RandomEase is an npm package that simplifies random data generation with ease. It provides a user-friendly interface for generating random numbers, strings, arrays, and more. Whether you need to generate random data for testing, prototyping, or any other purpose, RandomEase makes the process effortless and intuitive.",
+  "version": "1.0.7",
+  "description": "A powerful and versatile library for generating random data and values. It provides a wide range of functions to generate random numbers, strings, arrays, booleans, dates, colors, names, addresses, and more. The package is designed to simplify the generation of random data for testing, prototyping, and data simulation purposes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
