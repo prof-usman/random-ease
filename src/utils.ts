@@ -86,13 +86,12 @@ export function generatePhoneNumber(): string {
   return `+${countryCode}-${areaCode}-${number}`;
 }
 
-// Function to generate a random email address
 export function generateEmailAddress(): string {
+  const domains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'example.com'];
   const usernameLength = generateNumber(5, 10);
-  const domainLength = generateNumber(5, 10);
   const username = generateString(usernameLength);
-  const domain = generateString(domainLength);
-  return `${username}@${domain}.com`;
+  const randomDomain = generateRandomElement(domains);
+  return `${username}@${randomDomain}`;
 }
 
 // Function to generate a random GUID (Globally Unique Identifier)
@@ -374,4 +373,12 @@ export function generateTwitterHandle(): string {
   const handleLength = generateNumber(5, 10);
   const handle = generateString(handleLength);
   return `@${handle}`;
+}
+
+// Function to generate a random timestamp within a specified range
+export function generateTimestamp(start: Date, end: Date): number {
+  const startTime = start.getTime();
+  const endTime = end.getTime();
+  const randomTime = generateNumber(startTime, endTime);
+  return randomTime;
 }
