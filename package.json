@@ -1,6 +1,6 @@
 {
   "name": "random-ease",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A powerful and versatile library for generating random data and values. It provides a wide range of functions to generate random numbers, strings, arrays, booleans, dates, colors, names, addresses, and more. The package is designed to simplify the generation of random data for testing, prototyping, and data simulation purposes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
