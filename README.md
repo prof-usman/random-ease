@@ -86,6 +86,20 @@ console.log(randomEase.generateBoolean());
 | generateLicensePlate(): string                                                                                        | Generates a random license plate number                                       |
 | generateCompanyName(): string                                                                                         | Generates a random company name                                               |
 | generateTwitterHandle(): string                                                                                       | Generates a random Twitter handle                                             |
+| generateSSN(): string                                                                                                 | Generates a random social security number                                     |
+| generateRegistrationNumber(): string                                                                                  | Generates a random vehicle registration number                                |
+| generateDomainName(): string                                                                                          | Generates a random domain name                                                |
+| generateFruit(): string                                                                                               | Generates a random fruit                                                      |
+| generateProgrammingLanguage(): string                                                                                 | Generates a random programming language                                       |
+| generateUniversityName(): string                                                                                      | Generates a random university name                                            |
+| generateSportsTeamName(): string                                                                                      | Generates a random sports team name                                           |
+| generateProgrammingFramework(): string                                                                                | Generates a random programming framework                                      |
+| generateZodiacSign(): string                                                                                          | Generates a random Zodiac sign                                                |
+| generateJobIndustry(): string                                                                                         | Generates a random job industry                                               |
+| generateCurrencySymbol(): string                                                                                      | Generates a random currency symbol                                            |
+| generateJobLevel(): string                                                                                            | Generates a random job level                                                  |
+| generateVehicleMake(): string                                                                                         | Generates a random vehicle make                                               |
+| generateTimeZone(): string                                                                                            | Generates a random time zone                                                  |
 
 ## License
 

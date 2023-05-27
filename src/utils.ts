@@ -375,10 +375,118 @@ export function generateTwitterHandle(): string {
   return `@${handle}`;
 }
 
-// Function to generate a random timestamp within a specified range
-export function generateTimestamp(start: Date, end: Date): number {
-  const startTime = start.getTime();
-  const endTime = end.getTime();
-  const randomTime = generateNumber(startTime, endTime);
-  return randomTime;
+// Function to generate a random social security number
+export function generateSSN(): string {
+  const ssn =
+    generateNumber(100, 999).toString() +
+    '-' +
+    generateNumber(10, 99).toString() +
+    '-' +
+    generateNumber(1000, 9999).toString();
+  return ssn;
+}
+
+// Function to generate a random vehicle registration number
+export function generateRegistrationNumber(): string {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
+  let regNumber = '';
+  for (let i = 0; i < 3; i++) {
+    regNumber += generateRandomElement(letters.split(''));
+  }
+  regNumber += '-';
+  for (let i = 0; i < 4; i++) {
+    regNumber += generateRandomElement(numbers.split(''));
+  }
+  return regNumber;
+}
+
+// Function to generate a random domain name
+export function generateDomainName(): string {
+  const extensions = ['.com', '.net', '.org', '.io', '.co'];
+  const words = ['example', 'domain', 'website', 'company', 'business'];
+  const randomWord = generateRandomElement(words);
+  const randomExtension = generateRandomElement(extensions);
+  return randomWord + randomExtension;
+}
+
+// Function to generate a random fruit
+export function generateFruit(): string {
+  const fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Strawberry'];
+  return generateRandomElement(fruits);
+}
+
+// Function to generate a random programming language
+export function generateProgrammingLanguage(): string {
+  const languages = ['JavaScript', 'Python', 'Java', 'C++', 'Ruby'];
+  return generateRandomElement(languages);
+}
+
+// Function to generate a random university name
+export function generateUniversityName(): string {
+  const universities = ['Harvard', 'MIT', 'Stanford', 'Cambridge', 'Oxford'];
+  return generateRandomElement(universities);
+}
+
+// Function to generate a random sports team name
+export function generateSportsTeamName(): string {
+  const teams = ['Lions', 'Tigers', 'Eagles', 'Panthers', 'Sharks'];
+  const randomPrefix = generateRandomElement(teams);
+  const randomSuffix = generateRandomElement(teams);
+  return `${randomPrefix} ${randomSuffix}`;
+}
+
+// Function to generate a random programming framework
+export function generateProgrammingFramework(): string {
+  const frameworks = ['React', 'Angular', 'Vue', 'Node.js', 'Django'];
+  return generateRandomElement(frameworks);
+}
+
+// Function to generate a random Zodiac sign
+export function generateZodiacSign(): string {
+  const signs = [
+    'Aries',
+    'Taurus',
+    'Gemini',
+    'Cancer',
+    'Leo',
+    'Virgo',
+    'Libra',
+    'Scorpio',
+    'Sagittarius',
+    'Capricorn',
+    'Aquarius',
+    'Pisces',
+  ];
+  return generateRandomElement(signs);
+}
+
+// Function to generate a random job industry
+export function generateJobIndustry(): string {
+  const industries = ['Technology', 'Finance', 'Healthcare', 'Education', 'Retail'];
+  return generateRandomElement(industries);
+}
+
+// Function to generate a random currency symbol
+export function generateCurrencySymbol(): string {
+  const symbols = ['$', '€', '£', '¥', '₹'];
+  return generateRandomElement(symbols);
+}
+
+// Function to generate a random job level
+export function generateJobLevel(): string {
+  const levels = ['Entry Level', 'Mid Level', 'Senior Level', 'Executive Level'];
+  return generateRandomElement(levels);
+}
+
+// Function to generate a random vehicle make
+export function generateVehicleMake(): string {
+  const makes = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW'];
+  return generateRandomElement(makes);
+}
+
+// Function to generate a random time zone
+export function generateTimeZone(): string {
+  const timeZones = ['UTC-5', 'UTC+1', 'UTC-8', 'UTC+9', 'UTC+3'];
+  return generateRandomElement(timeZones);
 }
