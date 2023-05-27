@@ -296,10 +296,82 @@ export function generateAvatar(avatarSize = 200): string {
   return gravatarUrl;
 }
 
+// Function to generate a random social media handle
 export function generateSocialMediaHandle(): string {
   const prefixes = ['@', '#'];
   const handles = generateRandomHandles();
   const randomPrefix = generateRandomElement(prefixes);
   const randomHandle = generateRandomElement(handles);
   return randomPrefix + randomHandle;
+}
+
+// Function to generate a random ISBN (International Standard Book Number)
+export function generateISBN(): string {
+  const prefix = '978';
+  const group = generateNumber(0, 9).toString();
+  const publisher = generateNumber(0, 9999).toString().padStart(4, '0');
+  const title = generateNumber(0, 99999).toString().padStart(5, '0');
+  const checksum = generateNumber(0, 9).toString();
+  return `${prefix}-${group}-${publisher}-${title}-${checksum}`;
+}
+
+// Function to generate a random movie title
+export function generateMovieTitle(): string {
+  const adjectives = ['Fantastic', 'Amazing', 'Incredible', 'Spectacular', 'Thrilling'];
+  const nouns = ['Adventure', 'Journey', 'Quest', 'Mystery', 'Legacy'];
+  const randomAdjective = generateRandomElement(adjectives);
+  const randomNoun = generateRandomElement(nouns);
+  return `${randomAdjective} ${randomNoun}`;
+}
+
+// Function to generate a random book title
+export function generateBookTitle(): string {
+  const adjectives = ['The Great', 'The Secret', 'The Lost', 'The Hidden', 'The Forgotten'];
+  const nouns = ['Book', 'Tome', 'Novel', 'Chronicle', 'Saga'];
+  const randomAdjective = generateRandomElement(adjectives);
+  const randomNoun = generateRandomElement(nouns);
+  return `${randomAdjective} ${randomNoun}`;
+}
+
+// Function to generate a random quote
+export function generateQuote(): string {
+  const quotes = [
+    'The only way to do great work is to love what you do. - Steve Jobs',
+    'Innovation distinguishes between a leader and a follower. - Steve Jobs',
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    'The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt',
+    "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+  ];
+  return generateRandomElement(quotes);
+}
+
+// Function to generate a random license plate number
+export function generateLicensePlate(): string {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
+  let licensePlate = '';
+  for (let i = 0; i < 3; i++) {
+    licensePlate += generateRandomElement(letters.split(''));
+  }
+  licensePlate += '-';
+  for (let i = 0; i < 4; i++) {
+    licensePlate += generateRandomElement(numbers.split(''));
+  }
+  return licensePlate;
+}
+
+// Function to generate a random company name
+export function generateCompanyName(): string {
+  const prefixes = ['ABC', 'XYZ', 'Global', 'International', 'National'];
+  const suffixes = ['Corp', 'Inc', 'Ltd', 'Group', 'Solutions'];
+  const randomPrefix = generateRandomElement(prefixes);
+  const randomSuffix = generateRandomElement(suffixes);
+  return `${randomPrefix} ${randomSuffix}`;
+}
+
+// Function to generate a random Twitter handle
+export function generateTwitterHandle(): string {
+  const handleLength = generateNumber(5, 10);
+  const handle = generateString(handleLength);
+  return `@${handle}`;
 }

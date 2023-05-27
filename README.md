@@ -79,6 +79,13 @@ console.log(randomEase.generateBoolean());
 | generateSlug(title: string): string                                                                                   | Generates a random URL slug                                                   |
 | generateAvatar(avatarSize = 200): string                                                                              | Generates a random avatar URL                                                 |
 | generateSocialMediaHandle(): string                                                                                   | Generates a random social media handle                                        |
+| generateISBN(): string                                                                                                | Generates a random ISBN (International Standard Book Number)                  |
+| generateMovieTitle(): string                                                                                          | Generates a random movie title                                                |
+| generateBookTitle(): string                                                                                           | Generates a random book title                                                 |
+| generateQuote(): string                                                                                               | Generates a random quote                                                      |
+| generateLicensePlate(): string                                                                                        | Generates a random license plate number                                       |
+| generateCompanyName(): string                                                                                         | Generates a random company name                                               |
+| generateTwitterHandle(): string                                                                                       | Generates a random Twitter handle                                             |
 
 ## License
 
