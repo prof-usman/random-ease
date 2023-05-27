@@ -1,13 +1,15 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier', 'sort-exports'],
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   rules: {},
   overrides: [
     {
       files: ['src/**/*.js', 'src/**/*.ts'], // Specify the file patterns for the src folder
       rules: {
+        "sort-exports/sort-exports": ["error", {"sortDir": "asc"}],
+        'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
         "comma-dangle": ["error", "always-multiline"],
         "no-var": "error",
         "prefer-const": "error",
