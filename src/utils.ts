@@ -136,3 +136,99 @@ export function generateRandomTime(): string {
   const seconds = generateNumber(0, 59).toString().padStart(2, '0');
   return `${hours}:${minutes}:${seconds}`;
 }
+
+// Function to generate a random file name with extension
+export function generateFileName(extension: string): string {
+  const fileNameLength = generateNumber(5, 10);
+  const fileName = generateString(fileNameLength);
+  return `${fileName}.${extension}`;
+}
+
+// Function to generate a random URL
+export function generateURL(): string {
+  const protocol = generateRandomElement(['http', 'https']);
+  const domainLength = generateNumber(5, 10);
+  const domain = generateString(domainLength);
+  const pathLength = generateNumber(1, 5);
+  const path = generateString(pathLength);
+  return `${protocol}://${domain}/${path}`;
+}
+
+// Function to generate a random currency code
+export function generateCurrencyCode(): string {
+  const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD', 'PKR', 'INR'];
+  return generateRandomElement(currencies);
+}
+
+// Function to generate a random job title
+export function generateJobTitle(): string {
+  const jobTitles = [
+    'Software Developer',
+    'Data Analyst',
+    'Project Manager',
+    'UX Designer',
+    'Marketing Specialist',
+    'Financial Analyst',
+  ];
+  return generateRandomElement(jobTitles);
+}
+
+// Function to generate a random country
+export function generateCountry(): string {
+  const countries = [
+    'USA',
+    'Canada',
+    'Germany',
+    'France',
+    'Australia',
+    'Japan',
+    'Brazil',
+    'India',
+    'China',
+    'Italy',
+    'Pakistan',
+    'India',
+  ];
+  return generateRandomElement(countries);
+}
+
+// Function to generate a random credit card number (dummy)
+export function generateCreditCardNumber(): string {
+  let creditCardNumber = '';
+  for (let i = 0; i < 16; i++) {
+    creditCardNumber += generateNumber(0, 9).toString();
+  }
+  return creditCardNumber;
+}
+
+// Function to generate a random boolean value with a given probability
+export function generateBooleanWithProbability(probability: number): boolean {
+  return Math.random() < probability;
+}
+
+// Function to generate a random password with a given length and complexity
+export function generatePassword(
+  length: number,
+  includeUppercase: boolean,
+  includeNumbers: boolean,
+  includeSymbols: boolean,
+): string {
+  let characters = 'abcdefghijklmnopqrstuvwxyz';
+  if (includeUppercase) characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if (includeNumbers) characters += '0123456789';
+  if (includeSymbols) characters += '!@#$%^&*()';
+
+  let password = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters.charAt(randomIndex);
+  }
+  return password;
+}
+
+// Function to generate a random username
+export function generateUsername(): string {
+  const usernameLength = generateNumber(5, 10);
+  const username = generateString(usernameLength);
+  return username;
+}

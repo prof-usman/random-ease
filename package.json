@@ -1,6 +1,6 @@
 {
   "name": "random-ease",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RandomEase is an npm package that simplifies random data generation with ease. It provides a user-friendly interface for generating random numbers, strings, arrays, and more. Whether you need to generate random data for testing, prototyping, or any other purpose, RandomEase makes the process effortless and intuitive.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
