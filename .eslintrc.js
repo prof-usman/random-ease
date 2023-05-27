@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
@@ -64,5 +65,10 @@ module.exports = {
       }
     },
   ],
+  "globals": {
+    "describe": "readonly",
+    "test": "readonly",
+    "expect": "readonly"
+  },
   ignorePatterns: ['node_modules/', 'dist/'],
 };
