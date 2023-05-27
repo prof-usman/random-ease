@@ -45,34 +45,40 @@ console.log(randomEase.generateBoolean());
 
 ## Available Helper Functions
 
-| Method                         | Purpose                                                                       | Definition                                                                                                            |
-| ------------------------------ | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| generateNumber                 | Generates a random number within a specified range                            | generateNumber(min: number, max: number): number                                                                      |
-| generateString                 | Generates a random string of a specified length using alphanumeric characters | generateString(length: number): string                                                                                |
-| generateArray                  | Generates an array of random numbers within a given range                     | generateArray(length: number, min: number, max: number): number\[\]                                                   |
-| generateBoolean                | Generates a random boolean value                                              | generateBoolean(): boolean                                                                                            |
-| generateFloat                  | Generates a random floating-point number within a given range                 | generateFloat(min: number, max: number): number                                                                       |
-| generateRandomElement          | Generates a random element from an array                                      | generateRandomElement\<T>(array: T\[\]): T                                                                            |
-| generateRandomDate             | Generates a random date within a given range                                  | generateRandomDate(start: Date, end: Date): Date                                                                      |
-| generateRandomColor            | Generates a random RGB color value                                            | generateRandomColor(): string                                                                                         |
-| generateRandomHexColor         | Generates a random hexadecimal color value                                    | generateRandomHexColor(): string                                                                                      |
-| shuffleArray                   | To shuffle an array randomly                                                  | shuffleArray\<T>(array: T\[\]): T\[\]                                                                                 |
-| generateEmailAddress           | Generates a random email address                                              | generateEmailAddress(): string                                                                                        |
-| generateGUID                   | Generates a random GUID (Globally Unique Identifier)                          | generateGUID(): string                                                                                                |
-| generateIPv4Address            | Generates a random IPv4 address                                               | generateIPv4Address(): string                                                                                         |
-| generateMACAddress             | Generates a random MAC address                                                | generateMACAddress(): string                                                                                          |
-| generateUUID                   | Generates a random UUID (Universally Unique Identifier)                       | generateUUID(): string                                                                                                |
-| generateRandomTime             | Generates a random time in 24-hour format                                     | generateRandomTime(): string                                                                                          |
-| generatePhoneNumber            | Generates a random phone number                                               | generatePhoneNumber(): string                                                                                         |
-| generateFileName               | Generates a random file name with extension                                   | generateFileName(extension: string): string                                                                           |
-| generateURL                    | Generates a random URL                                                        | generateURL(): string                                                                                                 |
-| generateCurrencyCode           | Generates a random currency code                                              | generateCurrencyCode(): string                                                                                        |
-| generateJobTitle               | Generate a random job title                                                   | generateJobTitle(): string                                                                                            |
-| generateCreditCardNumber       | Generates a random credit card number (dummy)                                 | generateCreditCardNumber(): string                                                                                    |
-| generateCountry                | Generates a random country                                                    | generateCountry(): string                                                                                             |
-| generateBooleanWithProbability | Generates a random boolean value with a given probability                     | generateBooleanWithProbability(probability: number): boolean                                                          |
-| generatePassword               | Generates a random password with a given length and complexity                | generatePassword(length: number, includeUppercase: boolean, includeNumbers: boolean, includeSymbols: boolean): string |
-| generateUsername               | Generates a random username                                                   | generateUsername(): string                                                                                            |
+| Definition                                                                                                            | Purpose                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| generateNumber(min: number, max: number): number                                                                      | Generates a random number within a specified range                            |
+| generateString(length: number): string                                                                                | Generates a random string of a specified length using alphanumeric characters |
+| generateArray(length: number, min: number, max: number): number\[\]                                                   | Generates an array of random numbers within a given range                     |
+| generateBoolean(): boolean                                                                                            | Generates a random boolean value                                              |
+| generateFloat(min: number, max: number): number                                                                       | Generates a random floating-point number within a given range                 |
+| generateRandomElement\<T>(array: T\[\]): T                                                                            | Generates a random element from an array                                      |
+| generateRandomDate(start: Date, end: Date): Date                                                                      | Generates a random date within a given range                                  |
+| generateRandomColor(): string                                                                                         | Generates a random RGB color value                                            |
+| generateRandomHexColor(): string                                                                                      | Generates a random hexadecimal color value                                    |
+| shuffleArray\<T>(array: T\[\]): T\[\]                                                                                 | To shuffle an array randomly                                                  |
+| generateEmailAddress(): string                                                                                        | Generates a random email address                                              |
+| generateGUID(): string                                                                                                | Generates a random GUID (Globally Unique Identifier)                          |
+| generateIPv4Address(): string                                                                                         | Generates a random IPv4 address                                               |
+| generateMACAddress(): string                                                                                          | Generates a random MAC address                                                |
+| generateUUID(): string                                                                                                | Generates a random UUID (Universally Unique Identifier)                       |
+| generateRandomTime(): string                                                                                          | Generates a random time in 24-hour format                                     |
+| generatePhoneNumber(): string                                                                                         | Generates a random phone number                                               |
+| generateFileName(extension: string): string                                                                           | Generates a random file name with extension                                   |
+| generateURL(): string                                                                                                 | Generates a random URL                                                        |
+| generateCurrencyCode(): string                                                                                        | Generates a random currency code                                              |
+| generateJobTitle(): string                                                                                            | Generate a random job title                                                   |
+| generateCreditCardNumber(): string                                                                                    | Generates a random credit card number (dummy)                                 |
+| generateCountry(): string                                                                                             | Generates a random country                                                    |
+| generateBooleanWithProbability(probability: number): boolean                                                          | Generates a random boolean value with a given probability                     |
+| generatePassword(length: number, includeUppercase: boolean, includeNumbers: boolean, includeSymbols: boolean): string | Generates a random password with a given length and complexity                |
+| generateUsername(): string                                                                                            | Generates a random username                                                   |
+| generateAddress(): string                                                                                             | Generates a random address                                                    |
+| generateSentence(wordCount: number): string                                                                           | Generates a random sentence                                                   |
+| generateParagraph(sentenceCount: number, wordsPerSentence: number): string                                            | Generates a random paragraph                                                  |
+| generateSlug(title: string): string                                                                                   | Generates a random URL slug                                                   |
+| generateAvatar(avatarSize = 200): string                                                                              | Generates a random avatar URL                                                 |
+| generateSocialMediaHandle(): string                                                                                   | Generates a random social media handle                                        |
 
 ## License
 

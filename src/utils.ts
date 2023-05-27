@@ -1,3 +1,5 @@
+import { generateRandomHandles } from './helpers';
+
 // Function to generate a random number within a given range
 export function generateNumber(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -231,4 +233,73 @@ export function generateUsername(): string {
   const usernameLength = generateNumber(5, 10);
   const username = generateString(usernameLength);
   return username;
+}
+
+// Function to generate a random address
+export function generateAddress(): string {
+  const streetNames = ['Main St', 'First Ave', 'Oak Lane', 'Cedar Rd', 'Maple Avenue'];
+  const cities = ['New York', 'Los Angeles', 'London', 'Paris', 'Tokyo'];
+  const randomStreet = generateRandomElement(streetNames);
+  const randomCity = generateRandomElement(cities);
+  const randomNumber = generateNumber(100, 999);
+  return `${randomNumber} ${randomStreet}, ${randomCity}`;
+}
+
+// Function to generate a random sentence
+export function generateSentence(wordCount: number): string {
+  const words = [
+    'Lorem',
+    'ipsum',
+    'dolor',
+    'sit',
+    'amet',
+    'consectetur',
+    'adipiscing',
+    'elit',
+    'sed',
+    'do',
+    'eiusmod',
+    'tempor',
+    'incididunt',
+  ];
+  let sentence = '';
+  for (let i = 0; i < wordCount; i++) {
+    const randomWord = generateRandomElement(words);
+    sentence += randomWord + ' ';
+  }
+  return sentence.trim();
+}
+
+// Function to generate a random paragraph
+export function generateParagraph(sentenceCount: number, wordsPerSentence: number): string {
+  let paragraph = '';
+  for (let i = 0; i < sentenceCount; i++) {
+    const randomSentence = generateSentence(wordsPerSentence);
+    paragraph += randomSentence + '. ';
+  }
+  return paragraph.trim();
+}
+
+// Function to generate a random URL slug
+export function generateSlug(title: string): string {
+  const slug = title.toLowerCase().replace(/\s+/g, '-');
+  return slug;
+}
+
+// Function to generate a random avatar URL
+export function generateAvatar(avatarSize = 200): string {
+  const gravatarBaseUrl = 'https://www.gravatar.com/avatar/';
+  const avatarDesigns = ['identicon', 'monsterid', 'wavatar']; // Specify the available avatar designs
+  const randomEmail = generateEmailAddress();
+  const randomDesign = generateRandomElement(avatarDesigns); // Randomly select an avatar design
+  const gravatarUrl = `${gravatarBaseUrl}${encodeURIComponent(randomEmail)}?s=${avatarSize}&d=${randomDesign}`;
+  return gravatarUrl;
+}
+
+export function generateSocialMediaHandle(): string {
+  const prefixes = ['@', '#'];
+  const handles = generateRandomHandles();
+  const randomPrefix = generateRandomElement(prefixes);
+  const randomHandle = generateRandomElement(handles);
+  return randomPrefix + randomHandle;
 }
